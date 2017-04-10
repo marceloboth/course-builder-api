@@ -1,8 +1,7 @@
-class Api::V1::ChapterResource < JSONAPI::Resource
+class Api::V1::ContentResource < JSONAPI::Resource
   attributes :title, :order
 
-  has_one :course
-  has_many :contents
+  has_one :chapter
 
   def self.default_sort
     [{field: 'order', direction: :asc}]
