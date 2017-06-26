@@ -2,7 +2,7 @@ class ApplicationController < JSONAPI::ResourceController
   before_action :doorkeeper_authorize!
 
   def context
-    { api_user: current_user }
+    { current_user: current_user }
   end
 
   private
